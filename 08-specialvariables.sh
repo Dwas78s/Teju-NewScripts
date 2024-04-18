@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "variables in your script is:$@"
+echo "No. of variables declared in your script is :$#"
+echo "current script name is: $0"
+echo "current working directory:$PWD"
+echo "Hostname is:$HOSTNAME"
+echo "Home directory of current user:$HOME"
+echo "user running in this script: $USER"
+echo "processID for the current script: $$"
+ech0 "processID of last background command: $!"
