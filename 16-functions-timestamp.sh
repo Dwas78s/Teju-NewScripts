@@ -1,7 +1,7 @@
 #!/bin/bash
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-echo "script running on the below timestamp"
+echo "script running on the below $TIMESTAMP"
 VALIDATE()
 {
     if [ $1 -ne 0 ]
