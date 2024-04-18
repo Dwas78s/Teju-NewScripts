@@ -18,4 +18,7 @@ echo "You are a root user and going to next steps"
 fi
 dnf install mysql -y 
 VALIDATE $? "Installing MYSQL"
+dnf installl git -y
+VALIDATE $? "Installing GIT"
+
 
