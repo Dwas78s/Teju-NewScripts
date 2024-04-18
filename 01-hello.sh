@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello"
+echo "Hello, This is my first script in Shell"
