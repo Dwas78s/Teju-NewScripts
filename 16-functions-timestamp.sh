@@ -3,8 +3,8 @@ USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0| cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
-echo "SCRIPTNAME"
-echo "LOGFILE"
+echo "$SCRIPTNAME"
+echo "$LOGFILE"
 VALIDATE()
 {
     if [ $1 -ne 0 ]
