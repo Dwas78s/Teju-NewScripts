@@ -52,7 +52,7 @@ fi
 #setting up idempotency here -p if exists it will skip else it will create
 
 mkdir -p /app &>>LOGFILE
-VALIDATE $? "creating app directory"
+VALIDATE $? "creating App directory"
 
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>LOGFILE
 VALIDATE $? "Downloading backend code"
