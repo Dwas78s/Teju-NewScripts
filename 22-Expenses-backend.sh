@@ -48,7 +48,7 @@ useradd expense &>>LOGFILE
 VALIDATE $? "creating expense user"
 else
 echo -e "Expense user already created...$Y Skipping $N"
-
+fi
 #setting up idempotency here -p if exists it will skip else it will create
 
 mkdir -p /app &>>LOGFILE
@@ -58,7 +58,7 @@ curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expen
 VALIDATE $? "Downloading backend code"
 
 cd /app &>>LOGFILE
-VALIDATE $? "Going to app ditectory"
+VALIDATE $? "Going to app directory"
 
 rm -rf /app/* &>>LOGFILE #removes unzip files if exists
 unzip /tmp/backend.zip &>>LOGFILE
