@@ -24,7 +24,7 @@ VALIDATE()
 
 if [ $USERID -ne 0 ]
 then
-echo -e "$R Please run the script with root user $N"
+echo -e "$R Please run the script with super user $N"
 exit 1
 else
 echo -e "$Y Running the script with root user $N"
