@@ -29,7 +29,7 @@ then
 echo "Please run this script with root user"
 exit 1
 else
-echo -e " $Y You are a root user... I am proceeding with the next steps $N"
+echo -e " $Y You are a super user... I am proceeding with the next steps $N"
 fi
 
 dnf install mysql-server -y
