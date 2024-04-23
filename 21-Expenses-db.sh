@@ -39,7 +39,7 @@ systemctl enable mysqld
 VALIDATE $? "Enabling MYSQL Server"
 
 systemctl start mysqld
-VALIDATE $? "Starting MYSQL Server"
+VALIDATE $? "Starting MYSQL DB Server"
 
 #setting up idempotency because once we reset password again we cant do reset it.
 
