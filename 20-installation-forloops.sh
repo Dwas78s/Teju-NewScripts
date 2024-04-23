@@ -31,7 +31,7 @@ echo "Packages to install: $i"
 dnf list installed $i &>>LOGFILE
 if [ $? -eq 0 ]
 then
-echo -e "$G $i Already installed $N...$Y Skipping..$N"
+echo -e "$G $i Already package installed $N...$Y Skipping..$N"
 else
 dnf install $i -y &>>$LOGFILE
 VALIDATE $? "INSTALLATION of $i"
