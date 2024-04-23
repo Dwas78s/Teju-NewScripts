@@ -87,19 +87,3 @@ VALIDATE $? "Loading schema"
 
 systemctl restart backend &>>LOGFILE
 VALIDATE $? "Restarting backend"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
