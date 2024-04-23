@@ -83,7 +83,7 @@ dnf install mysql -y &>>LOGFILE
 VALIDATE $? "installing mysql client"
 
 mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>LOGFILE
-VALIDATE $? "Loading schema"
+VALIDATE $? "Loading schemas"
 
 systemctl restart backend &>>LOGFILE
 VALIDATE $? "Restarting backend"
