@@ -27,7 +27,7 @@ VALIDATE()
 if [ $USERID -ne 0 ]
 then
 echo "Please run this script with root user"
-exit1
+exit 1
 else
 echo -e " $Y You are a root user... I am proceeding with the next steps $N"
 fi
