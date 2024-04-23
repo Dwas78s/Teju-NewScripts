@@ -24,7 +24,7 @@ VALIDATE()
 
 #Checking root user or not
 
-if [$USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
 echo "Please run this script with root user"
 exit1
