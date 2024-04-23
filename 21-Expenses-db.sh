@@ -44,7 +44,7 @@ VALIDATE $? "Starting MYSQL DB Server"
 #setting up idempotency because once we reset password again we cant do reset it.
 
 mysql -h 172.31.83.73 -uroot -p$DBPassword -e 'show databases;' &>>LOGFILE
-if [ $? eq 0 ]
+if [ $? -eq 0 ]
 then
 echo -e " $Y Password setup is already done..Skipping $N"
 else
