@@ -22,7 +22,7 @@ VALIDATE()
     fi
 }
 
-#Checking root user or not
+#Checking script is executing with root user or not
 
 if [ $USERID -ne 0 ]
 then
