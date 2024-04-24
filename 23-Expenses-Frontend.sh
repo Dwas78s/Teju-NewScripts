@@ -21,35 +21,36 @@ VALIDATE()
 if [ $USERID -ne 0 ]
 then
 echo "Run this script with super user"
+exit 1
 else
 echo "You are a super user"
 fi
 
-dnf install nginx -y 
+dnf install nginx -y &>>LOGFILE
 VALIDATE $? "Installing nginx"
 
-systemctl enable nginx
+systemctl enable nginx &>>LOGFILE
 VALIDATE $? "Enabling nginx"
 
-systemctl start nginx
+systemctl start nginx &>>LOGFILE
 VALIDATE $? "starting nginx"
 
-rm -rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/* &>>LOGFILE
 VALIDATE $? "removing existing content"
 
-curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip &>>LOGFILE
 VALIDATE $? "Downloading front end code"
 
-cd /usr/share/nginx/html
+cd /usr/share/nginx/html &>>LOGFILE
 VALIDATE $? "Going to path"
 
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip &>>LOGFILE
 VALIDATE $? "unzipping frontend code"
 
-cp /home/ec2-user/Teju-NewScripts/expense.conf /etc/nginx/default.d/expense.conf
+cp /home/ec2-user/Teju-NewScripts/expense.conf /etc/nginx/default.d/expense.conf &>>LOGFILE
 VALIDATE $? "Copied expense.conf"
 
-systemctl restart nginx
+systemctl restart nginx &>>LOGFILE
 VALIDATE $? "restarting nginx"
 
 
