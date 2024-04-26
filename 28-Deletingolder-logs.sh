@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCEDIRECTORY=/tmp/app-logs
+SOURCEDIRECTORY=/tmp/applogs
 if [ -d $SOURCEDIRECTORY ]
 then
 echo "Sourcedirectory exists:$SOURCEDIRECTORY"
