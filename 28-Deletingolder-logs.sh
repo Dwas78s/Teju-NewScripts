@@ -1,6 +1,6 @@
 #!/bin/bash
 SOURCEDIRECTORY=/tmp/app-logs
-if [ -d $SOURCEDIRECTORY -ne 0 ]
+if [ -d $SOURCEDIRECTORY ]
 then
 echo "Sourcedirectory doesnot exists:$SOURCEDIRECTORY"
 exit1
