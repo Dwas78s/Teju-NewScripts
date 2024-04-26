@@ -8,5 +8,5 @@ echo "Sourcedirectory doesnot exists:$SOURCEDIRECTORY"
 exit 1
 fi
 FILES=$(find $SOURCEDIRECTORY "*.log" -mtime +14)
-echo "Files to deleted: $FILES"
+echo -e "Files to deleted: \n $FILES"
 
