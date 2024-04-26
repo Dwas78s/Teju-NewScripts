@@ -12,7 +12,7 @@ echo "Files to deleted:$FILES"
 while IFS=read -r line
 
 do
-echo "Deleting File: $FILES"
+echo "Deleting File: $line"
 
 done <<<$FILES
 
