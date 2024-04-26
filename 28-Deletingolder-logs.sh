@@ -13,6 +13,6 @@ while IFS= read -r line
 
 do
 echo "Deleting File: $line"
-
+rm -rf $line
 done <<<$FILES
 
