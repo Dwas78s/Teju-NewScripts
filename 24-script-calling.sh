@@ -5,4 +5,4 @@ echo "Process instance Id of current script:$$"
 
 ./25-script2-calling.sh
 
-echo "Variable from currentscript: $COURSE"
+echo "Variable from currentscript is : $COURSE"
