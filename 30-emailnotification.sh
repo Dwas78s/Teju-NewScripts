@@ -14,4 +14,4 @@ MESSAGE+="$FOLDER is morethan $DISKTHRESHOLD, current usage : $USAGE \n"
 fi
 done <<<$DISKUSAGE
 echo -e "Message: $MESSAGE"
-echo "$MESSAGE"|mail -s "Diskusagereport" "ctejaswini05@gmail.com"
+echo "$MESSAGE"|mail -s "Diskusagereport" "tejaswinichalla05@gmail.com"
