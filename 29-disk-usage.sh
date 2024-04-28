@@ -1,5 +1,5 @@
 #!/bin/bash
-DISKUSAGE=$(df-hT|grep xfs)
+DISKUSAGE=$(df -hT|grep xfs)
 DISKTHRESHOLD=10
 
 while IFS=read -r line
